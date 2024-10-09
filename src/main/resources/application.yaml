@@ -1,0 +1,13 @@
+# configure your datasource
+quarkus:
+  datasource:
+  db-kind : postgresql
+  username : school
+  password : school-123
+  jdbc :
+    url : jdbc:postgresql://localhost:5432/schooldb
+
+# drop and create the database at startup (use `update` to only update the schema)
+  hibernate-orm:
+    database: 
+      generation : drop-and-create
